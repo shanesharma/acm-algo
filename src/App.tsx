@@ -60,6 +60,8 @@ function App() {
   const left = currentStep ? currentStep.left : -1
   const right = currentStep ? currentStep.right : -1
   const swapping = currentStep ? currentStep.swapping : false
+  // Indices whose values just landed this step; drives the Place_Effect.
+  const placed = currentStep ? currentStep.placed : []
 
   // Inline pointer values for the Code_Panel (4.4). Show a pointer's value
   // whenever that pointer references a real slot (index >= 0). During the first
@@ -185,6 +187,7 @@ function App() {
         right={right}
         running={running}
         swapping={swapping}
+        placed={placed}
       />
 
       <Controls
