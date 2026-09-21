@@ -1,0 +1,301 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Add Vitest + fast-check and test scripts": [
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014205516
+      },
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014214600
+      },
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014404205
+      }
+    ],
+    "1.2 Define shared data types": [
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014205700
+      },
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014215360
+      },
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014405107
+      }
+    ],
+    "2.1 Implement `parseTestCase`": [
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014205754
+      },
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014409567
+      },
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014495337
+      }
+    ],
+    "3.1 Add pseudocode, Python source, and line map": [
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014205860
+      },
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014410885
+      },
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014495989
+      }
+    ],
+    "4.1 Implement `generateSteps` and `swapAt`": [
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014205969
+      },
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014500322
+      },
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014553984
+      }
+    ],
+    "5.1 Implement `next`, `prev`, and `reset` helpers": [
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014206078
+      },
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014411745
+      },
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014494025
+      }
+    ],
+    "6. Checkpoint - Ensure all pure-layer tests pass": [
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014206109
+      },
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014567903
+      },
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014581621
+      }
+    ],
+    "7.1 Implement `Test_Case_Input`": [
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014206137
+      },
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014595717
+      },
+      {
+        "executionId": "25b792c5-2103-4ab5-a7ef-dc17920c58ba",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790015096149
+      }
+    ],
+    "7.2 Implement `Array_View`": [
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014206173
+      },
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014596659
+      },
+      {
+        "executionId": "25b792c5-2103-4ab5-a7ef-dc17920c58ba",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790015096964
+      }
+    ],
+    "7.3 Implement `Controls`": [
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014206228
+      },
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014598038
+      },
+      {
+        "executionId": "25b792c5-2103-4ab5-a7ef-dc17920c58ba",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790015097923
+      }
+    ],
+    "7.4 Implement `Code_Panel`": [
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014206248
+      },
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014599001
+      },
+      {
+        "executionId": "25b792c5-2103-4ab5-a7ef-dc17920c58ba",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790015099356
+      }
+    ],
+    "8.1 Implement App state and derived render data": [
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014206278
+      },
+      {
+        "executionId": "25b792c5-2103-4ab5-a7ef-dc17920c58ba",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790015104777
+      }
+    ],
+    "8.2 Implement Run and auto-play effect": [
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014206476
+      },
+      {
+        "executionId": "25b792c5-2103-4ab5-a7ef-dc17920c58ba",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790015110087
+      }
+    ],
+    "8.3 Implement copy-to-clipboard handler": [
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014206522
+      },
+      {
+        "executionId": "25b792c5-2103-4ab5-a7ef-dc17920c58ba",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790015110786
+      }
+    ],
+    "9.1 Implement visual styling": [
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014206580
+      },
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014599904
+      },
+      {
+        "executionId": "25b792c5-2103-4ab5-a7ef-dc17920c58ba",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790015100098
+      }
+    ],
+    "10. Final checkpoint - Ensure all tests pass and the build succeeds": [
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014206651
+      }
+    ],
+    "1. Set up testing framework and shared types": [
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014405169
+      }
+    ],
+    "5. Extract pure navigation reducers": [
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014494100
+      }
+    ],
+    "2. Implement the input parsing layer": [
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014495368
+      }
+    ],
+    "3. Implement the code source layer": [
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014496035
+      }
+    ],
+    "4. Implement the step-generation layer": [
+      {
+        "executionId": "d987d0a0-b086-409b-9740-0d9306b4ce18",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790014554013
+      }
+    ],
+    "7. Build the presentational components": [
+      {
+        "executionId": "25b792c5-2103-4ab5-a7ef-dc17920c58ba",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790015099380
+      }
+    ],
+    "9. Styling": [
+      {
+        "executionId": "25b792c5-2103-4ab5-a7ef-dc17920c58ba",
+        "chatSessionId": "sess_cfc14712-8157-4e12-8ed4-ff10b87081ee",
+        "timestamp": 1790015100145
+      }
+    ]
+  }
+}

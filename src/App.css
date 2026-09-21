@@ -1,0 +1,561 @@
+.counter {
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+  margin-bottom: 24px;
+
+  &:hover {
+    border-color: var(--accent-border);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+.hero {
+  position: relative;
+
+  .base,
+  .framework,
+  .vite {
+    inset-inline: 0;
+    margin: 0 auto;
+  }
+
+  .base {
+    width: 170px;
+    position: relative;
+    z-index: 0;
+  }
+
+  .framework,
+  .vite {
+    position: absolute;
+  }
+
+  .framework {
+    z-index: 1;
+    top: 34px;
+    height: 28px;
+    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
+      scale(1.4);
+  }
+
+  .vite {
+    z-index: 0;
+    top: 107px;
+    height: 26px;
+    width: auto;
+    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
+      scale(0.8);
+  }
+}
+
+#center {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  place-content: center;
+  place-items: center;
+  flex-grow: 1;
+
+  @media (max-width: 1024px) {
+    padding: 32px 20px 24px;
+    gap: 18px;
+  }
+}
+
+#next-steps {
+  display: flex;
+  border-top: 1px solid var(--border);
+  text-align: left;
+
+  & > div {
+    flex: 1 1 0;
+    padding: 32px;
+    @media (max-width: 1024px) {
+      padding: 24px 20px;
+    }
+  }
+
+  .icon {
+    margin-bottom: 16px;
+    width: 22px;
+    height: 22px;
+  }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+#docs {
+  border-right: 1px solid var(--border);
+
+  @media (max-width: 1024px) {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+#next-steps ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 8px;
+  margin: 32px 0 0;
+
+  .logo {
+    height: 18px;
+  }
+
+  a {
+    color: var(--text-h);
+    font-size: 16px;
+    border-radius: 6px;
+    background: var(--social-bg);
+    display: flex;
+    padding: 6px 12px;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: var(--shadow);
+    }
+    .button-icon {
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+      flex: 1 1 calc(50% - 8px);
+    }
+
+    a {
+      width: 100%;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+  }
+}
+
+#spacer {
+  height: 88px;
+  border-top: 1px solid var(--border);
+  @media (max-width: 1024px) {
+    height: 48px;
+  }
+}
+
+.ticks {
+  position: relative;
+  width: 100%;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: -4.5px;
+    border: 5px solid transparent;
+  }
+
+  &::before {
+    left: 0;
+    border-left-color: var(--border);
+  }
+  &::after {
+    right: 0;
+    border-right-color: var(--border);
+  }
+}
+/* ==========================================================================
+   Two-Pointer Visualiser styling (task 9.1)
+   Requirements: 2.1 (white background), 2.3 (active cell yellow highlight),
+   3.1 (swap animation), 4.5 (Code_Panel natural growth).
+
+   Class-name hooks match exactly what the presentational components render:
+   - ArrayView   → .array-view, .cell, .cell.active, .cell.swap
+   - Controls    → .controls, .controls__run / __prev / __next / __reset,
+                   .controls__speed, .controls__speed-label, .controls__speed-select
+   - CodePanel   → .code-panel, .code-panel__header, .code-panel__mode,
+                   .code-panel__copy, .code-panel__code, .code-panel__line,
+                   .code-panel__line--current, .code-panel__caption,
+                   .code-panel__status--copied, .code-panel__status--error
+   - TestCaseInput → .test-case-input, .test-case-input__label,
+                   .test-case-input__row, .test-case-input__field,
+                   .test-case-input__run, .test-case-input__error
+   The .visualiser root matches the design's Visualiser wrapper.
+   ========================================================================== */
+
+/* --- Visualiser root: force a clean white surface (Req 2.1) -------------- */
+.visualiser {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.visualiser h1 {
+  color: #1a1a1a;
+  margin: 0;
+}
+
+/* --- Test_Case_Input ---------------------------------------------------- */
+.test-case-input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.test-case-input__label {
+  font-size: 15px;
+  color: #4a4a4a;
+}
+
+.test-case-input__row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.test-case-input__field {
+  flex: 1 1 auto;
+  font-family: var(--mono);
+  font-size: 16px;
+  padding: 10px 12px;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+.test-case-input__field:focus-visible {
+  outline: 2px solid #4a7cff;
+  outline-offset: 1px;
+}
+
+.test-case-input__field[aria-invalid='true'] {
+  border-color: #c0392b;
+}
+
+.test-case-input__run {
+  font-size: 15px;
+  padding: 10px 16px;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+.test-case-input__run:hover:not(:disabled) {
+  background-color: #f0f0f0;
+}
+
+.test-case-input__run:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.test-case-input__error {
+  color: #c0392b;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* --- Array_View & Cells ------------------------------------------------- */
+.array-view {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 24px 8px;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+/* Neutral cells on white (Req 2.1/2.2). position:relative + transition so the
+   swap transform (Req 3.1) can slide the cell toward its partner's slot. */
+.cell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  min-height: 48px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  background-color: #fafafa;
+  color: #1a1a1a;
+  font-family: var(--mono);
+  font-size: 18px;
+  /* Only the highlight fades via transition. The swap movement is a keyframe
+     animation (see .cell.swap) so it plays once, forward, and leaves no
+     lingering transition to drift back when the .swap class is removed. */
+  transition: background-color 150ms ease;
+}
+
+/* Active pointer cells: yellow highlight (Req 2.3, 2.4). */
+.cell.active {
+  background-color: #ffe066;
+  border-color: #e6c200;
+  color: #1a1a1a;
+}
+
+/* Swap step: the two active cells physically travel to each other's slot and
+   exchange places (Req 3.1). ArrayView sets `--swap-shift` per cell — the left
+   cell gets a positive shift, the right a negative one, each equal to the gap
+   between the pointers. The cells still show their PRE-swap letters (see
+   steps.ts), so the exact letters the user sees are the ones that move.
+
+   Implemented as a one-shot keyframe arc rather than a transition: the cell
+   lifts, carries across, and settles into the partner slot. Because the values
+   only commit on the following `advance` step, the cell holds its destination
+   position at the end of the animation and the new value lands there cleanly —
+   no reverse drift when the .swap class is removed. */
+.cell.swap {
+  z-index: 2;
+  animation: cell-swap 460ms cubic-bezier(0.45, 0, 0.2, 1) forwards;
+}
+
+@keyframes cell-swap {
+  0% {
+    transform: translate(0, 0) scale(1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  /* lift off */
+  25% {
+    transform: translate(calc(var(--swap-shift, 0) * 0.15), -14px) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  /* carry across, still elevated */
+  75% {
+    transform: translate(calc(var(--swap-shift, 0) * 0.85), -14px) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  /* settle into the partner slot */
+  100% {
+    transform: translate(var(--swap-shift, 0), 0) scale(1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+/* Place_Effect: the moment a value commits into its new slot (the `advance`
+   step), the receiving cell gives a quick squash-and-settle plus a green
+   confirmation pulse — the tactile "clunk" of the letter dropping into place.
+   Applied to both just-swapped indices; the animation replays because the
+   `place` class is freshly added on this render. */
+.cell.place {
+  animation: cell-place 380ms cubic-bezier(0.2, 0.9, 0.3, 1.4);
+}
+
+@keyframes cell-place {
+  0% {
+    transform: translateY(-6px) scale(1.12);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+    border-color: #34c759;
+  }
+  /* land with a slight squash */
+  45% {
+    transform: translateY(0) scaleX(1.1) scaleY(0.9);
+    border-color: #34c759;
+  }
+  /* rebound */
+  70% {
+    transform: translateY(-2px) scale(1.03);
+  }
+  /* rest */
+  100% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+/* --- Controls ----------------------------------------------------------- */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.controls__run,
+.controls__prev,
+.controls__next,
+.controls__reset {
+  font-size: 15px;
+  padding: 8px 16px;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+.controls__run:hover:not(:disabled),
+.controls__prev:hover:not(:disabled),
+.controls__next:hover:not(:disabled),
+.controls__reset:hover:not(:disabled) {
+  background-color: #f0f0f0;
+}
+
+.controls__run:disabled,
+.controls__prev:disabled,
+.controls__next:disabled,
+.controls__reset:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.controls__speed {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #4a4a4a;
+}
+
+.controls__speed-select {
+  font-family: var(--sans);
+  font-size: 14px;
+  padding: 6px 8px;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  cursor: pointer;
+}
+
+/* --- Code_Panel --------------------------------------------------------- */
+/* min-height keeps a stable footprint before a run; natural flow lets the
+   panel grow as the inline execution caption appears (Req 4.5). */
+.code-panel {
+  min-height: 220px;
+  background-color: var(--code-bg, #f4f3ec);
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  padding: 16px;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+
+.code-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.code-panel__mode {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #4a4a4a;
+}
+
+.code-panel__copy {
+  font-size: 14px;
+  padding: 6px 12px;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+.code-panel__copy:hover {
+  background-color: #f0f0f0;
+}
+
+.code-panel__code {
+  font-family: var(--mono);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+  white-space: pre;
+  color: #1a1a1a;
+}
+
+.code-panel__line {
+  display: block;
+  padding: 0 8px;
+  border-left: 3px solid transparent;
+}
+
+/* Current Python line: subtle highlight band (Req 4.3 support). */
+.code-panel__line--current {
+  background-color: #fff3bf;
+  border-left-color: #e6c200;
+}
+
+/* Inline live pointer-value caption grows the panel naturally (Req 4.4/4.5). */
+.code-panel__caption {
+  margin-top: 12px;
+  font-family: var(--mono);
+  font-size: 14px;
+  color: #4a4a4a;
+}
+
+.code-panel__status--copied {
+  margin-top: 8px;
+  color: #2e7d32;
+  font-size: 14px;
+}
+
+.code-panel__status--error {
+  margin-top: 8px;
+  color: #c0392b;
+  font-size: 14px;
+}
+
+/* --- Reduced-motion fallback (Req 3.1 accessibility) -------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .cell {
+    transition: background-color 150ms ease;
+  }
+
+  .cell.swap,
+  .cell.place {
+    transform: none;
+    box-shadow: none;
+    animation: none;
+  }
+}
+
+/* Pin the app to a light surface so the white background holds even when the
+   OS reports a dark color-scheme preference (Req 2.1). The .visualiser block
+   above sets its own explicit colors; this keeps the surrounding root white. */
+:root:has(.visualiser),
+#root:has(.visualiser) {
+  color-scheme: light;
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --text-h: #1a1a1a;
+  --border: #d0d0d0;
+  --code-bg: #f4f3ec;
+  background-color: #ffffff;
+}
